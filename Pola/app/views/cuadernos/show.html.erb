@@ -1,14 +1,23 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Cuaderno -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Tiempo:</strong>
-  <%= @cuaderno.tiempo %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:tiempo) %>:</strong></dt>
+  <dd><%= @cuaderno.tiempo %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipo) %>:</strong></dt>
+  <dd><%= @cuaderno.tipo %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:beneficio) %>:</strong></dt>
+  <dd><%= @cuaderno.beneficio %></dd>
+</dl>
 
-<p>
-  <strong>Tipo:</strong>
-  <%= @cuaderno.tipo %>
-</p>
-
-<%= link_to 'Edit', edit_cuaderno_path(@cuaderno) %> |
-<%= link_to 'Back', cuadernos_path %>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              cuadernos_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_cuaderno_path(@cuaderno), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              cuaderno_path(@cuaderno),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
