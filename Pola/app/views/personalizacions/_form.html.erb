@@ -1,0 +1,37 @@
+<%= form_for(personalizacion) do |f| %>
+  <% if personalizacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(personalizacion.errors.count, "error") %> prohibited this personalizacion from being saved:</h2>
+
+      <ul>
+      <% personalizacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :liston %>
+    <%= f.text_field :liston %>
+  </div>
+
+  <div class="field">
+    <%= f.label :imagen %>
+    <%= f.text_field :imagen %>
+  </div>
+
+  <div class="field">
+    <%= f.label :resorte %>
+    <%= f.check_box :resorte %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tipodehoja %>
+    <%= f.text_field :tipodehoja %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

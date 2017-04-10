@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tiempo: 2017-04-10 18:10:24
+  tipo: MyString
+
+two:
+  tiempo: 2017-04-10 18:10:24
+  tipo: MyString

@@ -1,0 +1,27 @@
+<%= form_for(cuaderno) do |f| %>
+  <% if cuaderno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cuaderno.errors.count, "error") %> prohibited this cuaderno from being saved:</h2>
+
+      <ul>
+      <% cuaderno.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tiempo %>
+    <%= f.time_select :tiempo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tipo %>
+    <%= f.text_field :tipo %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

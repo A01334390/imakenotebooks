@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tiempo:</strong>
+  <%= @cuaderno.tiempo %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @cuaderno.tipo %>
+</p>
+
+<%= link_to 'Edit', edit_cuaderno_path(@cuaderno) %> |
+<%= link_to 'Back', cuadernos_path %>

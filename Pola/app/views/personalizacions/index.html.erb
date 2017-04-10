@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Personalizacions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Liston</th>
+      <th>Imagen</th>
+      <th>Resorte</th>
+      <th>Tipodehoja</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @personalizacions.each do |personalizacion| %>
+      <tr>
+        <td><%= personalizacion.liston %></td>
+        <td><%= personalizacion.imagen %></td>
+        <td><%= personalizacion.resorte %></td>
+        <td><%= personalizacion.tipodehoja %></td>
+        <td><%= link_to 'Show', personalizacion %></td>
+        <td><%= link_to 'Edit', edit_personalizacion_path(personalizacion) %></td>
+        <td><%= link_to 'Destroy', personalizacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Personalizacion', new_personalizacion_path %>

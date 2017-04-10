@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  liston: 
+  imagen: MyString
+  resorte: false
+  tipodehoja: 
+
+two:
+  liston: 
+  imagen: MyString
+  resorte: false
+  tipodehoja: 

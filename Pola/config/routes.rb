@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
+  resources :clientes
+  resources :pedidos
+  resources :personalizacions
+  resources :cuadernos
+  resources :materials
+  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
