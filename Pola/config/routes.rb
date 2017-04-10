@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
+
   resources :clientes
   resources :pedidos
   resources :personalizacions

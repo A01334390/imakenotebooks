@@ -1,18 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Clientes</h1>
-
-<table>
-  <thead>
+<h1>Clientes en la base de datos</h1>
+<table class="table table-striped">
+  <thead >
     <tr>
-      <th>Nombre</th>
-      <th>Direccion</th>
-      <th>Personafisica</th>
+      <th class="padding-index">Nombre</th>
+      <th class="padding-index">Direccion</th>
+      <th class="padding-index">¿Es persona física?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class = "padding-index">
     <% @clientes.each do |cliente| %>
       <tr>
         <td><%= cliente.nombre %></td>
@@ -25,7 +24,6 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <%= link_to 'New Cliente', new_cliente_path %>
