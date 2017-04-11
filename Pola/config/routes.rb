@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   resources :clientes
   resources :pedidos
-  resources :personalizacions
   resources :cuadernos
   resources :materials
   devise_for :users

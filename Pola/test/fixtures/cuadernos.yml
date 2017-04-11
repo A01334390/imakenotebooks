@@ -1,9 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  tiempo: 2017-04-10 18:10:24
-  tipo: MyString
+  tiempo: 2017-04-10 17:39:35
+  tipo: 1
+  beneficio: 
+  liston: 1
+  imagen: MyString
+  resorte: 1
+  tipohojas: 1
 
 two:
-  tiempo: 2017-04-10 18:10:24
-  tipo: MyString
+  tiempo: 2017-04-10 17:39:35
+  tipo: 1
+  beneficio: 
+  liston: 1
+  imagen: MyString
+  resorte: 1
+  tipohojas: 1

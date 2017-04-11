@@ -69,6 +69,6 @@ class CuadernosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cuaderno_params
-      params.require(:cuaderno).permit(:tiempo, :tipo)
+      params.require(:cuaderno).permit(:tiempo, :tipo, :beneficio, :liston, :imagen, :resorte, :tipohojas)
     end
 end

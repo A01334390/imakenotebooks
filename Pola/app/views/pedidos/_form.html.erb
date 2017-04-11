@@ -18,22 +18,23 @@
   <div class="form-group">
     <%= f.label :estimado, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :estimado, :class => 'form-control' %>
+      <%= f.datetime_select :estimado, :class => 'form-control' %>
     </div>
     <%=f.error_span(:estimado) %>
   </div>
-  <div class="form-group">
+  <div class="form-group align-left">
     <%= f.label :prioridad, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :prioridad, :class => 'form-control' %>
+      <%= f.select :prioridad, ['Baja', 'Media','Alta']%>
     </div>
     <%=f.error_span(:prioridad) %>
   </div>
   <div class="form-group">
     <%= f.label :status, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :status, :class => 'form-control' %>
-    </div>
+       <div class="field">
+        <%= f.select :status, ['Design', 'Preview','Laminado','Revision','Prensa','Embalaje','Enviado','Entregado']%>
+       </div>
     <%=f.error_span(:status) %>
   </div>
   <div class="form-group">
@@ -46,7 +47,7 @@
   <div class="form-group">
     <%= f.label :fecha, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :fecha, :class => 'form-control' %>
+      <%= f.date_select :fecha, :class => 'form-control' %>
     </div>
     <%=f.error_span(:fecha) %>
   </div>

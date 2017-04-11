@@ -1,48 +1,52 @@
-<%= form_for @cuaderno, :html => { :class => "form-horizontal cuaderno" } do |f| %>
+<%= form_for(cuaderno) do |f| %>
+  <% if cuaderno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cuaderno.errors.count, "error") %> prohibited this cuaderno from being saved:</h2>
 
-  <% if @cuaderno.errors.any? %>
-    <div id="error_expl" class="panel panel-danger">
-      <div class="panel-heading">
-        <h3 class="panel-title"><%= pluralize(@cuaderno.errors.count, "error") %> prohibited this cuaderno from being saved:</h3>
-      </div>
-      <div class="panel-body">
-        <ul>
-        <% @cuaderno.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
+      <ul>
+      <% cuaderno.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= f.label :tiempo, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :tiempo, :class => 'form-control' %>
-    </div>
-    <%=f.error_span(:tiempo) %>
-  </div>
-  <div class="form-group">
-    <%= f.label :tipo, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :tipo, :class => 'form-control' %>
-    </div>
-    <%=f.error_span(:tipo) %>
-  </div>
-  <div class="form-group">
-    <%= f.label :beneficio, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :beneficio, :class => 'form-control' %>
-    </div>
-    <%=f.error_span(:beneficio) %>
+  <div class="field">
+    <%= f.label :tiempo %>
+    <%= f.time_select :tiempo %>
   </div>
 
-  <div class="form-group">
-    <div class="col-lg-offset-2 col-lg-10">
-      <%= f.submit nil, :class => 'btn btn-primary' %>
-      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                cuadernos_path, :class => 'btn btn-default' %>
-    </div>
+  <div class="field">
+    <%= f.label :tipo %>
+    <%= f.number_field :tipo %>
   </div>
 
+  <div class="field">
+    <%= f.label :beneficio %>
+    <%= f.text_field :beneficio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :liston %>
+    <%= f.number_field :liston %>
+  </div>
+
+  <div class="field">
+    <%= f.label :imagen %>
+    <%= f.text_field :imagen %>
+  </div>
+
+  <div class="field">
+    <%= f.label :resorte %>
+    <%= f.number_field :resorte %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tipohojas %>
+    <%= f.number_field :tipohojas %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>

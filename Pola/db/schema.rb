@@ -20,14 +20,6 @@ ActiveRecord::Schema.define(version: 20170410182555) do
     t.datetime "updated_at",    null: false
   end
 
-  create_table "cuadernos", force: :cascade do |t|
-    t.time     "tiempo"
-    t.string   "tipo"
-    t.float    "beneficio"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "materials", force: :cascade do |t|
     t.string   "nombre"
     t.integer  "cantidad"
@@ -41,15 +33,6 @@ ActiveRecord::Schema.define(version: 20170410182555) do
     t.integer  "status"
     t.integer  "cantidad"
     t.date     "fecha"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "personalizacions", force: :cascade do |t|
-    t.integer  "liston"
-    t.string   "imagen"
-    t.boolean  "resorte"
-    t.integer  "tipodehoja"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

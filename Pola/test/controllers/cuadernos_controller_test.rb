@@ -17,7 +17,7 @@ class CuadernosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create cuaderno" do
     assert_difference('Cuaderno.count') do
-      post cuadernos_url, params: { cuaderno: { tiempo: @cuaderno.tiempo, tipo: @cuaderno.tipo } }
+      post cuadernos_url, params: { cuaderno: { beneficio: @cuaderno.beneficio, imagen: @cuaderno.imagen, liston: @cuaderno.liston, resorte: @cuaderno.resorte, tiempo: @cuaderno.tiempo, tipo: @cuaderno.tipo, tipohojas: @cuaderno.tipohojas } }
     end
 
     assert_redirected_to cuaderno_url(Cuaderno.last)
@@ -34,7 +34,7 @@ class CuadernosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update cuaderno" do
-    patch cuaderno_url(@cuaderno), params: { cuaderno: { tiempo: @cuaderno.tiempo, tipo: @cuaderno.tipo } }
+    patch cuaderno_url(@cuaderno), params: { cuaderno: { beneficio: @cuaderno.beneficio, imagen: @cuaderno.imagen, liston: @cuaderno.liston, resorte: @cuaderno.resorte, tiempo: @cuaderno.tiempo, tipo: @cuaderno.tipo, tipohojas: @cuaderno.tipohojas } }
     assert_redirected_to cuaderno_url(@cuaderno)
   end
 
